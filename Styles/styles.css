@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0px;
+}
+
+a :hover, a:visited, a:link, a:active {
+  color: #36bf59;
+  text-decoration: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 4px;
+  -webkit-transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+  transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-size: 100% 4px;
+}
+
+.page-conteneur {
+  width: 100%;
+}
+
+header {
+  background-color: #545454;
+  height: 200px;
+}
+
+.conteneur {
+  width: 90%;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,47 @@
+// html, body, a, default margin and default text dec.
+
+html, body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0px;
+}
+
+a :hover, a:visited, a:link, a:active{
+    color: #36bf59;
+    text-decoration: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 4px;
+    transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    background-size: 100% 4px;
+  }
+
+// body
+
+.page-conteneur {
+    width: 100%;
+}
+
+//header
+
+header {
+    background-color: rgb(84, 84, 84);
+    height: 200px;
+}
+
+.conteneur {
+    width: 90%;
+}
+
