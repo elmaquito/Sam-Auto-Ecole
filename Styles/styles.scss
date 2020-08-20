@@ -1,32 +1,40 @@
+//variables 
+
+$color_background: #424242;
+$color_font:#558B2F;
+$formule_border: #D3D3D3;
+$formule_title: #f44336;
+
+// colors
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: green; 
+} 
+
+.green {
+    color: green; 
+
+}
+
+.background--light_grey {
+    background-color: #BDBDBD;
+}
+
+.navbar, a{
+    color: $color_font;
+}
+
 // html, body, a, default margin and default text dec.
 
 html, body {
     margin: 0;
+    position: relative;
 }
 
-h1 {
+h1, h2, h3 {
     margin: 0px;
 }
-
-a :hover, a:visited, a:link, a:active{
-    color: #36bf59;
-    text-decoration: none;
-}
-
-.navbar a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 4px;
-    transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
-  }
-  
-  a:hover,
-  a:focus {
-    text-decoration: none;
-    background-size: 100% 4px;
-  }
 
 // body
 
@@ -34,14 +42,181 @@ a :hover, a:visited, a:link, a:active{
     width: 100%;
 }
 
-//header
+// header
 
 header {
-    background-color: rgb(84, 84, 84);
-    height: 200px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    opacity: 1;
+    font-family: "Flatform_light";
 }
 
-.conteneur {
-    width: 90%;
+.website_title, h1{
+    font-size: 5em;
 }
 
+.website_template {
+    background-color: $color_background;
+    opacity: 0.8;
+}
+
+// link style 
+
+.green_link a , a:hover {
+    color: $color_font;
+    text-decoration: none;
+}
+
+// link animation
+
+header nav a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 4px;
+    transition: background-size cubic-bezier(0,.5,0,1) 0.5s;
+    font-size: 1em;
+}
+  
+header a:hover, a:focus {
+    text-decoration: none;
+    background-size: 100% 4px;
+}
+
+//main
+
+.forfait_main {
+    background-color: rgb(207, 216, 220, );
+}
+// 
+.forfait_article {
+    background-color: #FAFAFA;
+    width: 70%;
+    margin: 50px 0px 50px 0px;
+}
+
+.header_img {
+    // border-top: 3px solid $color_font;
+    // border-bottom: 3px solid $color_font;
+    border: 6px solid $color_font ;
+    width: 100%;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+.div_link {
+    border: solid ;
+    border-color: $color_font;
+    text-decoration: none;
+    color: $color_font;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.section_title {
+    padding: 20px 0px 0px 0px;
+}
+
+.div_link::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.div_link a {
+    text-decoration: none;
+}
+
+.cpf_img img{
+    width: 60%;
+    margin: auto;
+}
+
+// formules accueil
+
+.main_formules {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.formule {
+    margin: auto;
+    margin-top: 20px; 
+    margin-bottom: 40px;
+    border: solid $formule_border 2px;
+    border-radius: 5px;
+}
+
+.formule_title {
+    background-color: $formule_title;
+    // border: solid $formule_border 2px;
+}
+
+.formule h2{
+    font-size: 25px;
+}
+
+.formule h4{
+    font-size: 16px;
+}
+
+.formule h3{
+    font-size: 70px;
+    color: #e53935;
+    padding-bottom: 30px;
+    padding: 0px 15px 30px 15px;
+}
+
+.formule img {
+    padding-bottom: 40px;
+    width: 120px;
+    padding: 0px 15px 40px 15px;
+}
+
+.formule button {
+    margin-bottom: 30px;
+}
+
+// contact
+.contact {
+    font-size: 10px;
+}
+
+.contact > *{
+    margin: 3px 0px 3 px 0px;
+}
+.contact, span {
+    font-size: 1.4em;
+}
+//footer
+
+footer a {
+    color: #ffffff;
+    font-size: 0.6em;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#navbarDropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+@font-face {
+    font-family: "Flatform_light";
+    src: url("../Polices/Flatform_light/flatform_light.otf")
+}
