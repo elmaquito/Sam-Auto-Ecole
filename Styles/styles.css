@@ -1,18 +1,10 @@
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-  color: green;
+  color: white;
 }
 
 .green {
   color: green;
-}
-
-.background--light_grey {
-  background-color: #BDBDBD;
-}
-
-.navbar, a {
-  color: #558B2F;
 }
 
 html, body {
@@ -46,6 +38,10 @@ header {
   opacity: 0.8;
 }
 
+.navbar, a {
+  color: lightgrey;
+}
+
 .green_link a, a:hover {
   color: #558B2F;
   text-decoration: none;
@@ -74,13 +70,14 @@ header a:hover, a:focus {
 
 .forfait_article {
   background-color: #FAFAFA;
-  width: 70%;
+  width: 80%;
   margin: 50px 0px 50px 0px;
 }
 
 .header_img {
   border: 6px solid #558B2F;
   width: 100%;
+  background-color: white;
 }
 
 .center {
@@ -194,6 +191,49 @@ footer {
 
 #navbarDropdown:hover > .dropdown-menu {
   display: block;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #558B2F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  height: auto;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 @font-face {
