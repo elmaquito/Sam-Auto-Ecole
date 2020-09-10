@@ -13,7 +13,7 @@ $formule_title: #f44336;
 } 
 
 .green {
-    color: green; 
+    color: $color_font; 
 }
 
 
@@ -43,10 +43,12 @@ header {
     width: 100%;
     opacity: 1;
     font-family: "Flatform_light";
+    max-height: 200px;
 }
 
 .website_title, h1{
-    font-size: 5em;
+    font-size: 5vw;
+    padding: 0px 0px 0px 40px;
 }
 
 .website_template {
@@ -76,7 +78,7 @@ header nav a {
     transition: background-size cubic-bezier(0,.5,0,1) 0.5s;
     font-size: 1em;
 }
-  
+
 header a:hover, a:focus {
     text-decoration: none;
     background-size: 100% 4px;
@@ -87,16 +89,119 @@ header a:hover, a:focus {
 .forfait_main {
     background-color: rgb(207, 216, 220, );
 }
-// 
+
 .forfait_article {
     background-color: #FAFAFA;
-    width: 80%;
+    width: 90%;
     margin: 50px 0px 50px 0px;
 }
 
+.article_header {
+    margin: 40px 0px 40px 0px;
+}
+
+.forfait_title {
+    background-color: $color_background;
+    width: 100%;
+    color: white;
+    text-align: center;
+    min-height: 70px;
+}
+
+.pack_description {
+    width: 80%;
+    margin: 50px 40px 50px 40px;
+    box-shadow: 0px 1px 1px 1px grey;
+    min-width: 400px;
+    max-width: 300px;
+}
+
+.packs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.forfait_component {
+    list-style: none;
+    width: 100%;
+}
+
+.forfait_component li{
+    margin: 10px 0px 10px 0px;
+}
+
+.forfait_component li::before{
+    content: "\25AA";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $color_font; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.forfait_explications {
+    width: 80%;
+}
+
+.forfait_explications *{
+    margin: 15px 0px 10px 0px;
+}
+.forfait_explications h2{
+    text-align: center;
+}
+
+.forfait_conversation {
+    width: 80%;
+}
+
+.forfait_explications h2 h3 {
+    color: $color_background;
+}
+
+// btn animation
+
+.button {
+    border-radius: 4px;
+    background-color: $color_font;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    height: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 .header_img {
-    // border-top: 3px solid $color_font;
-    // border-bottom: 3px solid $color_font;
     border: 6px solid $color_font ;
     width: 100%;
     background-color: white;
@@ -156,8 +261,7 @@ header a:hover, a:focus {
 }
 
 .formule_title {
-    background-color: $formule_title;
-    // border: solid $formule_border 2px;
+    background-color: $color_font;
 }
 
 .formule h2{
@@ -168,12 +272,6 @@ header a:hover, a:focus {
     font-size: 16px;
 }
 
-.formule h3{
-    font-size: 70px;
-    color: #e53935;
-    padding-bottom: 30px;
-    padding: 0px 15px 30px 15px;
-}
 
 .formule img {
     padding-bottom: 40px;
@@ -181,11 +279,19 @@ header a:hover, a:focus {
     padding: 0px 15px 40px 15px;
 }
 
+.formule_price{
+    font-size: 70px;
+    color: $color_font;
+    padding-bottom: 30px;
+    padding: 15px 20px 15px 20px;
+}
+
 .formule button {
     margin-bottom: 30px;
 }
 
 // contact
+
 .contact {
     font-size: 10px;
 }
@@ -196,11 +302,12 @@ header a:hover, a:focus {
 .contact, span {
     font-size: 1.4em;
 }
+
 //footer
 
 footer a {
     color: #ffffff;
-    font-size: 0.6em;
+    font-size: 0.9em;
 }
 
 footer {
@@ -213,45 +320,6 @@ footer {
     display: block;
 }
 
-.button {
-    border-radius: 4px;
-    background-color: #558B2F;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 15px;
-    padding: 20px;
-    width: 200px;
-    height: auto;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
 
 @font-face {
     font-family: "Flatform_light";
